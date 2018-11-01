@@ -1,0 +1,98 @@
+header
+{
+    position: relative;
+}
+
+article
+{
+    padding: 10px 20px;
+    border: 1px solid #b5b5b5;
+    width: 400px;
+    margin: auto;
+    transition-duration: .5s;
+}
+
+.name
+{
+    width: 400px;
+}
+
+section
+{
+    width: 400px;
+}
+
+.image_container
+{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.small_description
+{
+    display: none;
+}
+
+.hamburger
+{
+    cursor: pointer;
+    font-size: 30px;
+    display: inline-block;
+    transition-duration: .5s;
+}
+
+.view
+{
+    display: none;
+}
+
+.view:checked ~ header .hamburger
+{
+    transform: rotate(90deg);
+}
+
+.view:checked ~ article
+{
+    display: inline-block;
+}
+
+.view:checked ~ article section .small_description
+{
+    display: inline;
+}
+
+.view:checked ~ article
+{
+    border: 1px solid #b5b5b5;
+    width: 350px;
+    transition-duration: .5s;
+    padding: 0;
+    margin: 4px;
+}
+
+.view:checked ~ article section
+{
+    padding: 5px;
+}
+
+.view:checked ~ article:hover
+{
+    box-shadow: 0 1px 9px 0 #00000087;
+}
+
+.view:checked ~ article .image_container
+{
+    height: 300px;
+}
+
+.view:checked ~ article section .description
+{
+    display: none;
+}
